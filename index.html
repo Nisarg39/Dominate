@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Unfold &mdash; A onepage portfolio HTML template by Colorlib</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="html, css, javascript, jquery">
+    <meta name="author" content="">
+
+    <!-- Bebas Neue font for aggressive fitness header -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="css/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/vendor/animate.min.css">
+    <link rel="stylesheet" href="css/vendor/aos.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/jquery.fancybox.min.css">
+    
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Mobile gradient fix -->
+    <style>
+      @media (max-width: 992px) {
+        .mobile-gradient-fix {
+          background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(202,47,46,0.2) 30%, rgba(202,47,46,0.3) 50%, rgba(202,47,46,0.2) 70%, rgba(0,0,0,0.7) 100%) !important;
+        }
+        #hero-title {
+          font-size: clamp(3.5rem, 15vw, 10rem) !important;
+        }
+      }
+      
+      /* Button Animations */
+      @keyframes glowPulse {
+        0%, 100% { 
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(202, 47, 46, 0.3), 0 0 0 0 rgba(202, 47, 46, 0.7);
+        }
+        50% { 
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(202, 47, 46, 0.3), 0 0 0 8px rgba(202, 47, 46, 0);
+        }
+      }
+      
+      @keyframes shimmer {
+        0% { transform: translateX(-150%); opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { transform: translateX(350%); opacity: 0; }
+      }
+      
+      .hero-action-btn {
+        animation: glowPulse 2s ease-in-out infinite;
+      }
+      
+      .hero-action-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), rgba(255,255,255,0.12), rgba(255,255,255,0.08), transparent);
+        animation: shimmer 4s ease-in-out infinite;
+        border-radius: 6px;
+      }
+      
+      /* Professional UI Enhancements */
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+      }
+      
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; transform: scale(1); }
+        50% { opacity: 0.8; transform: scale(1.1); }
+      }
+      
+      @keyframes letterGlow {
+        0%, 100% { text-shadow: 0 6px 30px rgba(0,0,0,0.8), 0 2px 8px rgba(202,47,46,0.5), 0 0 0 rgba(202,47,46,0); }
+        50% { text-shadow: 0 6px 30px rgba(0,0,0,0.8), 0 2px 8px rgba(202,47,46,0.5), 0 0 20px rgba(202,47,46,0.6); }
+      }
+      
+      @keyframes scrollBreathe {
+        0%, 100% { transform: translateY(0px); opacity: 0.7; }
+        50% { transform: translateY(-5px); opacity: 1; }
+      }
+      
+      .dom-letter {
+        display: inline-block;
+        animation: letterGlow 3s ease-in-out infinite;
+      }
+      
+      .dom-letter:nth-child(1) { animation-delay: 0s; }
+      .dom-letter:nth-child(2) { animation-delay: 0.1s; }
+      .dom-letter:nth-child(3) { animation-delay: 0.2s; }
+      .dom-letter:nth-child(4) { animation-delay: 0.3s; }
+      .dom-letter:nth-child(5) { animation-delay: 0.4s; }
+      .dom-letter:nth-child(6) { animation-delay: 0.5s; }
+      .dom-letter:nth-child(7) { animation-delay: 0.6s; }
+      .dom-letter:nth-child(8) { animation-delay: 0.7s; }
+      
+      .floating-particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(202, 47, 46, 0.6);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .geometric-accent {
+        position: absolute;
+        border: 1px solid rgba(202, 47, 46, 0.3);
+        pointer-events: none;
+        z-index: 1;
+      }
+      
+      .mouse-wrap {
+        animation: scrollBreathe 2s ease-in-out infinite;
+      }
+      
+      /* Fitness-themed animated elements */
+      @keyframes bounce {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        25% { transform: translateY(-15px) rotate(5deg); }
+        50% { transform: translateY(-30px) rotate(0deg); }
+        75% { transform: translateY(-15px) rotate(-5deg); }
+      }
+      
+      @keyframes heartbeat {
+        0%, 100% { transform: scale(1); opacity: 0.6; }
+        50% { transform: scale(1.3); opacity: 1; }
+      }
+      
+      @keyframes barbell-lift {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+      }
+      
+      @keyframes energy-pulse {
+        0% { transform: scale(0.5); opacity: 0; }
+        50% { transform: scale(1.2); opacity: 0.8; }
+        100% { transform: scale(2); opacity: 0; }
+      }
+      
+      .fitness-dumbbell {
+        position: absolute;
+        width: 32px;
+        height: 16px;
+        background: linear-gradient(90deg, #555, #aaa, #555);
+        border-radius: 3px;
+        pointer-events: none;
+        z-index: 1;
+        filter: contrast(1.2) brightness(1.1);
+        image-rendering: crisp-edges;
+      }
+      
+      .fitness-dumbbell::before,
+      .fitness-dumbbell::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 24px;
+        background: #ca2f2e;
+        top: -4px;
+        border-radius: 2px;
+        border: 1px solid rgba(0,0,0,0.3);
+      }
+      
+      .fitness-dumbbell::before { left: -2px; }
+      .fitness-dumbbell::after { right: -2px; }
+      
+      .heartbeat-line {
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background: #ca2f2e;
+        pointer-events: none;
+        z-index: 1;
+        filter: contrast(1.3) brightness(1.2);
+        box-shadow: 0 0 4px rgba(202,47,46,0.5);
+      }
+      
+      .heartbeat-line::before {
+        content: '';
+        position: absolute;
+        left: 25px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid #ca2f2e;
+        filter: drop-shadow(0 0 2px rgba(202,47,46,0.7));
+      }
+      
+      .energy-circle {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border: 3px solid #ca2f2e;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+        filter: contrast(1.3) brightness(1.1);
+        box-shadow: 0 0 6px rgba(202,47,46,0.6), inset 0 0 4px rgba(202,47,46,0.3);
+      }
+      
+      .barbell-icon {
+        position: absolute;
+        width: 50px;
+        height: 6px;
+        background: #ca2f2e;
+        pointer-events: none;
+        z-index: 1;
+        filter: contrast(1.2) brightness(1.1);
+        box-shadow: 0 0 4px rgba(202,47,46,0.5);
+        border-radius: 1px;
+      }
+      
+      .barbell-icon::before,
+      .barbell-icon::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 20px;
+        background: #ca2f2e;
+        top: -7px;
+        border-radius: 2px;
+        border: 1px solid rgba(0,0,0,0.2);
+        box-shadow: 0 0 3px rgba(202,47,46,0.4);
+      }
+      
+      .barbell-icon::before { left: 0; }
+      .barbell-icon::after { right: 0; }
+    </style>
+
+  </head>
+  <body data-spy="scroll" data-target=".site-nav-target" data-offset="200">
+
+    <nav class="unslate_co--site-mobile-menu">
+      <div class="close-wrap d-flex">
+        <a href="#" class="d-flex ml-auto js-menu-toggle">
+          <span class="close-label">Close</span>
+          <div class="close-times">
+            <span class="bar1"></span>
+            <span class="bar2"></span>
+          </div>
+        </a>
+      </div>
+      <div class="site-mobile-inner"></div>
+    </nav>
+
+
+    <div class="unslate_co--site-wrap">
+
+      <div class="unslate_co--site-inner">
+
+        <div class="lines-wrap">
+          <div class="lines-inner">
+            <div class="lines"></div>
+          </div>
+        </div>
+        <!-- END lines -->
+      
+      <nav class="unslate_co--site-nav site-nav-target">
+
+        <div class="container">
+        
+          <div class="row align-items-center justify-content-between text-left">
+            <div class="col-md-5 text-right">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li class="has-children">
+                  <a href="#home-section" class="nav-link">Home</a>
+                  <ul class="dropdown">
+                    <li>
+                      <a href="index.html">Hero Image BG</a>
+                    </li>
+                    <li>
+                      <a href="index-video.html">Video BG</a>
+                    </li>
+                    <li>
+                      <a href="index-hero-slider.html">Hero Slider</a>
+                    </li>
+                    <li>
+                      <a href="index-sidebar-menu.html">Sidebar Menu</a>
+                    </li>
+                    <li>
+                      <a href="index-right-menu.html">Right Menu</a>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
+                <li><a href="#about-section" class="nav-link">About</a></li>
+                <li><a href="#services-section" class="nav-link">Services</a></li>
+              </ul>
+            </div>
+            <div class="site-logo pos-absolute">
+              <!-- <a href="index.html" class="unslate_co--site-logo">Unfold<span>.</span></a> -->
+               <div class="glassBox logo-glass-navbar">
+                   <img src="images/logo.png" alt="Logo" class="img-fluid navbar-logo-animate" style="height:38px;width:auto;vertical-align:middle;z-index:2;position:relative;">
+                 </div>
+            </div>
+            <div class="col-md-5 text-right text-lg-left">
+              <ul class="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
+                <li><a href="#skills-section" class="nav-link">Skills</a></li>
+                <li><a href="#testimonial-section" class="nav-link">Testimonial</a></li>
+                <li><a href="#journal-section" class="nav-link">Journal</a></li>
+                <li><a href="#contact-section" class="nav-link">Contact</a></li>
+              </ul>
+
+              <ul class="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
+                <li><a href="#" class="js-menu-toggle">Menu</a></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+      </nav>
+      <!-- END nav -->
+
+      <div class="cover-v1 jarallax" id="home-section" style="position:relative;overflow:hidden;">
+        <div class="marquee-bg" style="position:absolute;inset:0;z-index:0;pointer-events:none;opacity:0.18;filter:blur(2px);overflow:hidden;">
+          <div class="marquee marquee--inner"><p style="font-size: clamp(1.5rem, 4vw, 3rem);">DOMINATE &bull; PERFORMANCE &bull; TRAIN &bull; WIN &bull;</p></div>
+        </div>
+        <!-- <video autoplay loop muted playsinline
+          src="https://video.wixstatic.com/video/da6c12_2024426761104035a4da1a4d952f99a6/1080p/mp4/file.mp4"
+          style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;z-index:0;pointer-events:none;opacity:0.2;filter:brightness(0.4) contrast(1.4) blur(1px);">
+        </video> -->
+        <div style="position:absolute;inset:0;z-index:1;pointer-events:none;filter: grayscale(1); opacity:0.8;"></div>
+        <div class="mobile-gradient-fix" style="position:absolute;inset:0;background:linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(202,47,46,0.15) 25%, rgba(202,47,46,0.25) 50%, rgba(202,47,46,0.15) 75%, rgba(0,0,0,0.6) 100%);z-index:2;filter:saturate(1.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);"></div>
+        <div class="hero-tangled-overlay"></div>
+        
+        <!-- Grid-distributed floating elements -->
+        
+        <!-- Top row (5%-15%) -->
+        <div class="floating-particle" style="top: 8%; left: 10%; animation: float 6s ease-in-out infinite;"></div>
+        <div class="energy-circle" style="top: 12%; left: 45%; animation: energy-pulse 3s ease-in-out infinite;"></div>
+        <div class="geometric-accent" style="top: 10%; right: 15%; width: 60px; height: 60px; animation: pulse 4s ease-in-out infinite;"></div>
+        
+        <!-- Upper-mid row (20%-35%) -->
+        <div class="heartbeat-line" style="top: 25%; left: 8%; animation: heartbeat 1.2s ease-in-out infinite;"></div>
+        <div class="fitness-dumbbell" style="top: 28%; left: 35%; animation: bounce 4s ease-in-out infinite;"></div>
+        <div class="barbell-icon" style="top: 30%; right: 10%; animation: barbell-lift 7s ease-in-out infinite;"></div>
+        <div class="floating-particle" style="top: 32%; right: 35%; animation: float 8s ease-in-out infinite 1s;"></div>
+        
+        <!-- Center row (40%-60%) -->
+        <div class="geometric-accent" style="top: 45%; left: 5%; width: 80px; height: 80px; border-radius: 50%; animation: pulse 6s ease-in-out infinite 1s;"></div>
+        <div class="energy-circle" style="top: 48%; left: 70%; animation: energy-pulse 3s ease-in-out infinite 1s;"></div>
+        <div class="floating-particle" style="top: 52%; right: 8%; animation: float 7s ease-in-out infinite 2s;"></div>
+        <div class="fitness-dumbbell" style="top: 55%; left: 25%; animation: bounce 5s ease-in-out infinite 1.5s;"></div>
+        
+        <!-- Lower-mid row (65%-80%) -->
+        <div class="barbell-icon" style="top: 68%; left: 12%; animation: barbell-lift 8s ease-in-out infinite 2s;"></div>
+        <div class="floating-particle" style="top: 70%; left: 55%; animation: float 9s ease-in-out infinite 3s;"></div>
+        <div class="heartbeat-line" style="top: 72%; right: 12%; animation: heartbeat 1.2s ease-in-out infinite 0.6s;"></div>
+        <div class="energy-circle" style="top: 75%; right: 40%; animation: energy-pulse 3s ease-in-out infinite 2s;"></div>
+        
+        <!-- Bottom row (85%-95%) -->
+        <div class="geometric-accent" style="top: 88%; left: 20%; width: 40px; height: 40px; transform: rotate(45deg); animation: pulse 5s ease-in-out infinite 2s;"></div>
+        <div class="fitness-dumbbell" style="top: 90%; right: 25%; animation: bounce 6s ease-in-out infinite 3s;"></div>
+        <div class="floating-particle" style="top: 92%; right: 8%; animation: float 5s ease-in-out infinite 1.5s;"></div>
+        <div class="energy-circle" style="top: 94%; left: 60%; animation: energy-pulse 3s ease-in-out infinite 0.5s;"></div>
+        
+        <!-- Logo Watermark -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; pointer-events: none;">
+          <img src="images/logo.png" alt="Logo Watermark" style="
+            width: clamp(300px, 50vw, 600px);
+            height: auto;
+            opacity: 0.15;
+            filter: grayscale(100%) brightness(1.5) contrast(0.8);
+            mix-blend-mode: soft-light;
+          ">
+        </div>
+        <div class="container" style="position:relative;z-index:3;">
+          <div class="row align-items-center">
+              
+            <div class="col-md-10 col-lg-8 mx-auto text-center" style="padding: 0 15px;">
+              <h1 id="hero-title" class="heading" style="color: #ca2f2e; font-family: 'Anton', sans-serif; font-weight: 900; letter-spacing: 0.15em; font-size: clamp(2.5rem, 10vw, 8.5rem); text-shadow: 0 6px 30px rgba(0,0,0,0.8), 0 2px 8px rgba(202,47,46,0.5); margin-bottom:0; position:relative; overflow:visible; white-space:nowrap; -webkit-text-stroke: 1px rgba(202,47,46,0.3);">
+                <span id="hero-title-text" style="position:relative;z-index:2;overflow:visible;white-space:nowrap;display:inline-block;">
+                  <span class="dom-letter">D</span><span class="dom-letter">O</span><span class="dom-letter">M</span><span class="dom-letter">I</span><span class="dom-letter">N</span><span class="dom-letter">A</span><span class="dom-letter">T</span><span class="dom-letter">E</span>
+                </span>
+                <span id="hero-title-mask" style="position:absolute;left:0;top:0;height:100%;background:#ca2f2e;z-index:3;transform:translateX(0);opacity:1;transition:transform 1.1s ease, opacity 0.5s ease;overflow:visible;"></span>
+              </h1>
+          
+              <h2 id="hero-subtitle" class="subheading fancy-underline" style="text-shadow: 0 2px 12px #000a; margin-top:0.2em; display:inline-block; font-size: clamp(1rem, 3vw, 1.8rem); line-height: 1.2; position: relative;">
+                <span id="hero-subtitle-text" style="position:relative;z-index:2;"></span>
+                <div style="position: absolute; bottom: -8px; left: 50%; transform: translateX(-50%); width: 0%; height: 2px; background: linear-gradient(90deg, transparent, #ca2f2e, transparent); transition: width 1s ease 1.5s;" id="subtitle-underline"></div>
+              </h2>
+              
+              <div style="margin-top: clamp(1.5rem, 4vw, 2.5rem); opacity: 0;" id="hero-button-container">
+                <a href="#about-section" class="hero-action-btn smoothscroll" style="
+                  display: inline-block;
+                  padding: clamp(12px, 2.5vw, 18px) clamp(28px, 5vw, 40px);
+                  background: rgba(0, 0, 0, 0.8);
+                  color: #ffffff;
+                  text-decoration: none;
+                  font-family: 'Anton', sans-serif;
+                  font-weight: 700;
+                  font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+                  letter-spacing: 0.08em;
+                  text-transform: uppercase;
+                  border-radius: 6px;
+                  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 3px 8px rgba(202, 47, 46, 0.3);
+                  transition: all 0.3s ease;
+                  position: relative;
+                  overflow: hidden;
+                  border: 2px solid #ca2f2e;
+                  backdrop-filter: blur(15px);
+                  -webkit-backdrop-filter: blur(15px);
+                "
+                onmouseover="this.style.transform='translateY(-3px)'; this.style.animation='none'; this.style.boxShadow='0 12px 35px rgba(0, 0, 0, 0.6), 0 6px 12px rgba(202, 47, 46, 0.5)'; this.style.background='rgba(202, 47, 46, 0.15)'; this.style.borderColor='#ffffff';"
+                onmouseout="this.style.transform='translateY(0)'; this.style.animation='glowPulse 2s ease-in-out infinite'; this.style.background='rgba(0, 0, 0, 0.8)'; this.style.borderColor='#ca2f2e';">
+                  START YOUR JOURNEY
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <a href="#portfolio-section" class="mouse-wrap smoothscroll" style="bottom: clamp(20px, 5vh, 50px);">
+          <span class="mouse">
+            <span class="scroll"></span>
+          </span>
+          <span class="mouse-label" style="font-size: clamp(0.8rem, 2vw, 1rem);">Scroll</span>
+        </a>
+
+      </div>
+      <!-- END .cover-v1 --
+    <!-- Loader -->
+    <div id="unslate_co--overlayer"></div>
+    <div class="site-loader-wrap">
+      <div class="site-loader"></div>
+    </div>
+
+    <script src="js/scripts-dist.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+// Cool JS reveal animation for hero title and subtitle (opposite directions)
+window.addEventListener('DOMContentLoaded', function() {
+  var mask = document.getElementById('hero-title-mask');
+  var title = document.getElementById('hero-title');
+  var titleText = document.getElementById('hero-title-text');
+  var subtitle = document.getElementById('hero-subtitle');
+  var subtitleText = document.getElementById('hero-subtitle-text');
+  var subtitleFull = 'Built for Sport Performance!';
+  // Set mask to cover only the text, not the whole container
+  function setMaskToText() {
+    var textRect = titleText.getBoundingClientRect();
+    var parentRect = title.getBoundingClientRect();
+    var left = textRect.left - parentRect.left;
+    var width = textRect.width;
+    mask.style.left = left + 'px';
+    mask.style.width = width + 'px';
+    mask.style.opacity = '1';
+    mask.style.transition = 'none';
+    mask.style.display = 'block';
+  }
+  setMaskToText();
+  // Responsive: update mask on resize
+  if (window.ResizeObserver) {
+    const resizeObs = new ResizeObserver(setMaskToText);
+    resizeObs.observe(titleText);
+    window.addEventListener('resize', setMaskToText);
+  } else {
+    window.addEventListener('resize', setMaskToText);
+  }
+  setTimeout(function() {
+    var textRect = titleText.getBoundingClientRect();
+    var parentRect = title.getBoundingClientRect();
+    var left = textRect.left - parentRect.left;
+    var width = textRect.width;
+    mask.style.transition = 'left 1.1s ease, width 1.1s ease, opacity 0.3s ease 1.1s';
+    mask.style.left = (left + width) + 'px';
+    mask.style.width = '0px';
+    // Fade out at the end of the slide
+    setTimeout(function() {
+      mask.style.opacity = '0';
+      setTimeout(function() {
+        mask.style.display = 'none';
+      }, 300);
+    }, 1100);
+    // Typing effect for subheader
+    let i = 0;
+    const totalDuration = 1100; // ms
+    const perChar = Math.max(10, Math.floor(totalDuration / subtitleFull.length));
+    function typeSubtitle() {
+      if (i < subtitleFull.length) {
+        subtitleText.textContent = subtitleFull.slice(0, i);
+        i++;
+        setTimeout(typeSubtitle, perChar);
+      } else if (i === subtitleFull.length) {
+        // Add blinking exclamation mark
+        subtitleText.innerHTML = subtitleFull.slice(0, -1) + '<span class="blink-exclaim"> ! </span>';
+        // Show button and underline after subtitle completes
+        setTimeout(function() {
+          var buttonContainer = document.getElementById('hero-button-container');
+          var underline = document.getElementById('subtitle-underline');
+          if (buttonContainer) {
+            buttonContainer.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            buttonContainer.style.opacity = '1';
+            buttonContainer.style.transform = 'translateY(0)';
+          }
+          if (underline) {
+            underline.style.width = '100%';
+          }
+        }, 300);
+      }
+    }
+    typeSubtitle();
+  }, 200);
+});
+ </script>
+
+  </body>
+</html>
