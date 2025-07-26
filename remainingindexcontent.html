@@ -1,5 +1,16 @@
-<div class="unslate_co--section" id="portfolio-section">
-    <div class="container">
+<div class="unslate_co--section" id="portfolio-section" style="position: relative;">
+    <!-- Portfolio Logo Watermark -->
+    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1; pointer-events: none;">
+      <img src="images/logo.png" alt="Logo Watermark" style="
+        width: clamp(250px, 40vw, 500px);
+        height: auto;
+        opacity: 0.08;
+        filter: grayscale(100%) brightness(1.8) contrast(0.6);
+        mix-blend-mode: soft-light;
+      ">
+    </div>
+    
+    <div class="container" style="position: relative; z-index: 2;">
       
       
       <div class="relative"><div class="loader-portfolio-wrap"><div class="loader-portfolio"></div></div> </div>
